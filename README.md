@@ -48,5 +48,7 @@ public class LocalUserV2 {
 2. 팩토리에서는 OCP를 준수하여 확장에는 열려있으며, 변경에는 닫혀있습니다.
 3. 추가적인 제품 M3Robot 생산요청이 들어오더라도 M1,M2 Factory에는 영향이 없으며
    M3Factory 클래스를 구현하여 확장할수있습니다.
+
+RobotFactory 인터페이스 하위에는 AbstractRobotFactory 를 중간계층으로 두어 구체적인 생성은 하위 클래스에게 위임하였습니다.
 ```
 ![robot_factory](https://github.com/gojunghyo/design-pattern-study/assets/128199051/42a0c9d8-17b8-405c-9c02-0f985676098a)
