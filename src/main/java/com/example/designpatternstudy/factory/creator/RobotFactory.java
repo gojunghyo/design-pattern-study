@@ -1,7 +1,7 @@
 package com.example.designpatternstudy.factory.creator;
 
 import com.example.designpatternstudy.factory.product.Robot;
-import com.example.designpatternstudy.factory.product.parts.Cpu;
+import com.example.designpatternstudy.factory.product.parts.cpu.Cpu;
 
 public interface RobotFactory {
 

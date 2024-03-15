@@ -2,8 +2,8 @@ package com.example.designpatternstudy.factory.product.Impl;
 
 import com.example.designpatternstudy.factory.product.Robot;
 import com.example.designpatternstudy.factory.product.RobotType;
-import com.example.designpatternstudy.factory.product.parts.Cpu;
-import com.example.designpatternstudy.factory.product.parts.Memory;
+import com.example.designpatternstudy.factory.product.parts.cpu.Cpu;
+import com.example.designpatternstudy.factory.product.parts.mem.Memory;
 import java.time.LocalDate;
 
 public class M1Robot extends Robot {

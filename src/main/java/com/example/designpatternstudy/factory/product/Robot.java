@@ -1,7 +1,7 @@
 package com.example.designpatternstudy.factory.product;
 
-import com.example.designpatternstudy.factory.product.parts.Cpu;
-import com.example.designpatternstudy.factory.product.parts.Memory;
+import com.example.designpatternstudy.factory.product.parts.cpu.Cpu;
+import com.example.designpatternstudy.factory.product.parts.mem.Memory;
 import java.time.LocalDate;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -40,5 +40,13 @@ public class Robot implements RobotAction{
     this.cpu = cpu;
     this.updateDate = LocalDate.now();
     return this;
+  }
+
+  public void insertCPU(Cpu cpu) {
+    this.cpu = cpu;
+  }
+
+  public void insertMemory(Memory memory) {
+    this.memory = memory;
   }
 }
