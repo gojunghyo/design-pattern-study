@@ -53,3 +53,14 @@ RobotFactory 인터페이스 하위에는 AbstractRobotFactory를 중간계층�
 하위 클래스에게 위임하였습니다.
 ```
 ![robot_factory](https://github.com/gojunghyo/design-pattern-study/assets/128199051/42a0c9d8-17b8-405c-9c02-0f985676098a)
+
+
+
+### Abstract Factory Method Pattern
+```
+1. 로봇을 구현하는 여러 객체들중 CPU, Memory 속성 객체를 추상화 하여
+   팩토리 메서드 패턴을 사용하여 구현합니다.
+2. M1,M2 RobotFactory에서는 RobotPartsFactory 의존성을 주입받으며, RobotPartsFactory 에서는 cpu, memory 를 insert 해줍니다. 
+```
+![m1_factory](https://github.com/gojunghyo/design-pattern-study/assets/128199051/15e807a6-07b8-483b-a122-1fd52a5b0746)
+
