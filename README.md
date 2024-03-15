@@ -5,9 +5,41 @@
 1. double checked locking
 2. static inner class
 ```
-1. ![Double](https://github.com/gojunghyo/design-pattern-study/assets/128199051/6a195cb5-6750-4780-a8bd-0914c96d667f)
+```java
+public class LocalUserV1 {
 
-2. ![statis_inner](https://github.com/gojunghyo/design-pattern-study/assets/128199051/a21abb44-7f7a-4f02-af1a-217665bd3d27)
+  // 1. double checkd locking
+  private static volatile LocalUserV1 INSTANCE;
+
+  public static LocalUserV1 getInstance() {
+    if (INSTANCE == null) {
+      synchronized (LocalUserV1.class) {
+        if(INSTANCE == null) {
+          INSTANCE = new LocalUserV1();
+        }
+      }
+    }
+    return INSTANCE;
+  }
+
+}
+```
+```java
+public class LocalUserV2 {
+
+  // 2. static inner class
+
+  public static LocalUserV2 getInstance() {
+    return LocalUserV2Holder.INSTANCE;
+  }
+
+  static class LocalUserV2Holder {
+    private static final LocalUserV2 INSTANCE = new LocalUserV2();
+  }
+
+}
+```
+
 
 
 ### Factory Method Design Pattern

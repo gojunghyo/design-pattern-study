@@ -2,7 +2,7 @@ package com.example.designpatternstudy.singleton;
 
 public class LocalUserV2 {
 
-  // static inner class
+  // 2. static inner class
 
   public static LocalUserV2 getInstance() {
     return LocalUserV2Holder.INSTANCE;
