@@ -15,7 +15,6 @@ public class MainFactoryApp {
 
     Robot m1Robot = new M1RobotFactory(new M1PartFactory()).orderRobot("M1Robot");
     System.out.println(m1Robot);
-
   }
 
 }
