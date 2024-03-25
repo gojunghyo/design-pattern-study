@@ -73,3 +73,16 @@ RobotFactory 인터페이스 하위에는 AbstractRobotFactory를 중간계층�
 3. 위 과정을 RobotDirector 에게 위임하여 RobotBuilder를 DI 한후 attackRobot 과 guardRobot을 생성하게 됩니다.
 ```
 ![robotbuilder](https://github.com/gojunghyo/design-pattern-study/assets/128199051/65566a82-2aa8-461d-b55b-90a1ea38301a)
+
+
+### Adapter Pattern
+```
+1. 수정할수없는 라이브러리 (spring security) 의 UserDetails, UserDetailsService 인터페이스가 존재할때
+2. 두 인터페이스를 구현한 다른 객체 MemberDetails, MemberDetailsService 를 두고
+3. MeberService 에서 Member 를 생성하는 메소드를 만듭니다.
+4. MemberDetailsService 는 MeberService 를 주입받아서 Member를 만듭니다.
+5. LoginHandler 에서 MemberDetailsService 를 주입받아서 Member 를 Return 해줍니다.
+6. 이처럼 수정할수없는 라이브러리가 존재할때 어댑터 패턴을 이용해서 OCP 를 준수하며 변경이 가능하도록 만드는 디자인 패턴입니다.
+
+```
+![adapter_pattern](https://github.com/gojunghyo/design-pattern-study/assets/128199051/b37b4e37-9062-4ca7-8cd1-7fcab1f93027)
