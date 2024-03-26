@@ -1,6 +1,6 @@
 package com.example.designpatternstudy.builder.delegate;
 
-import com.example.designpatternstudy.builder.model.DefaultRobot;
+import com.example.designpatternstudy.builder.model.DefaultRobotBuilder;
 import com.example.designpatternstudy.builder.model.DetailRobotSkill;
 import com.example.designpatternstudy.builder.model.RobotBuilder;
 import com.example.designpatternstudy.builder.model.SkillLevel;
@@ -14,7 +14,7 @@ public class RobotDirector {
     this.robotBuilder = robotBuilder;
   }
 
-  public DefaultRobot createAttackRobot() {
+  public DefaultRobotBuilder createAttackRobot() {
     return robotBuilder
         .name("공격 로봇")
         .createDate(LocalDate.now())
@@ -23,7 +23,7 @@ public class RobotDirector {
         .getDefaultRobot();
   }
 
-  public DefaultRobot createGuardRobot() {
+  public DefaultRobotBuilder createGuardRobot() {
     return robotBuilder
         .name("방어 로봇")
         .createDate(LocalDate.now())

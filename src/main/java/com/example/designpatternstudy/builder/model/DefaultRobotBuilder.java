@@ -3,7 +3,13 @@ package com.example.designpatternstudy.builder.model;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
 public class DefaultRobotBuilder implements RobotBuilder{
 
   private String name;
@@ -35,7 +41,7 @@ public class DefaultRobotBuilder implements RobotBuilder{
   }
 
   @Override
-  public DefaultRobot getDefaultRobot() {
-    return new DefaultRobot(name, createDate, robotSkillList);
+  public DefaultRobotBuilder getDefaultRobot() {
+    return new DefaultRobotBuilder(name, createDate, robotSkillList);
   }
 }

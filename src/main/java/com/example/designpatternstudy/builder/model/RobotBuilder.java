@@ -10,5 +10,5 @@ public interface RobotBuilder {
 
   RobotBuilder addSkill(DetailRobotSkill detailRobotSkill);
 
-  DefaultRobot getDefaultRobot();
+  DefaultRobotBuilder getDefaultRobot();
 }
