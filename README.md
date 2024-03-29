@@ -86,3 +86,14 @@ RobotFactory 인터페이스 하위에는 AbstractRobotFactory를 중간계층�
 
 ```
 ![adapter_pattern](https://github.com/gojunghyo/design-pattern-study/assets/128199051/b37b4e37-9062-4ca7-8cd1-7fcab1f93027)
+
+
+### Composite Pattern
+```
+1. 전체와 개별 객체를 동일하게 처리할수 있는 패턴입니다.
+2. Egg, Grape 라는 개별 상품이 존재할때, 두객체의 공통 메서드인 getPrice 를 추상화하기위해서 ShoppingCartElement 인터페이스를 구현하게합니다.
+3. 개별 상품의 상위 객체로서 ShoppingCart에서 상품들을 담아둘수있는 add() 메서드, 전체 상품가격 totalPrice() 메서드를 만듭니다.
+4. 이처럼 전체나 일부이거나 동일하게 처리가 가능한것은 ShoppingCartElement에서 getPrice를 뽑아내었기 때문입니다.
+```
+![composite_design_pattern](https://github.com/gojunghyo/design-pattern-study/assets/128199051/f9d10778-8a2a-491c-b842-748d046052af)
+
