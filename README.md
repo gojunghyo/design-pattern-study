@@ -68,11 +68,11 @@ RobotFactory 인터페이스 하위에는 AbstractRobotFactory를 중간계층�
 
 ### Builder Pattern
 ```
-1. RobotBuilder를 구현한 DefaultRobotBuilder에서 체이닝 방식으로 속성을 받습니다.
-2. getDefaultRobot() 메서드를 통해서 주입받은 속성필드로 부터 DefaultRobot을 생성합니다.
-3. 위 과정을 RobotDirector 에게 위임하여 RobotBuilder를 DI 한후 attackRobot 과 guardRobot을 생성하게 됩니다.
+1. RobotBuilder를 구현한 DefaultRobotBuilder에서 체이닝 방식으로 필드를 주입받습니다.
+2. getDefaultRobot() 메서드를 통해서 DefaultRobotBuilder를 생성합니다.
+3. RobotDirector 에게 DefaultRobotBuilder 생성을 위임하여 RobotBuilder를 의존성주입 (DI) 한후 attackRobot 과 guardRobot을 생성하게 됩니다.
 ```
-![robotbuilder](https://github.com/gojunghyo/design-pattern-study/assets/128199051/65566a82-2aa8-461d-b55b-90a1ea38301a)
+![robot_builder_pattern](https://github.com/gojunghyo/design-pattern-study/assets/128199051/386f981e-f682-4388-bfed-ec261efaf173)
 
 
 ### Adapter Pattern
